@@ -1,0 +1,27 @@
+version: 0.2
+
+env:
+  secrets-manager:
+    SLACK_BOT_TOKEN: okzSlackBotToken
+    SLACK_CHANNEL: okzSlackChannel
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+      - apt-get install -y git python3-pip
+      - pip3 install boto3 pytz
+      - node -v
+      - npm install -g cdk
+      - npm install
+    finally:
+      - echo This always runs even if the update or install command fails
+  pre_build:
+    commands:
+      - echo Lets do CDK Deploy...
+      - cdk synth -c stage=dev --require-approval never > /dev/null
+      - cdk deploy -c stage=dev --require-approval never
+  post_build:
+    commands:
+      - python3 afterDeploy.py
