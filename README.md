@@ -71,3 +71,24 @@ git commit -m ':bug: fix xxx'
 25. :see_no_evil: (Add or update .gitignore file)
 
 ```
+
+## Reset / clear all git commit
+
+```bash
+git checkout --orphan latest_branch
+git add -A
+git commit -am "init"
+git branch -D master
+git branch -m master
+git push -f origin master
+```
+
+## Remove all released tag
+
+```bash
+# delete all remote tags
+git tag | xargs -L 1 | xargs git push origin --delete
+
+# delete all local tags
+git tag | xargs -L 1 | xargs git tag --delete
+```
