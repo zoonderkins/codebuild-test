@@ -8,7 +8,7 @@ export class VpcInfra extends cdk.Stack {
     super(scope, id, props)
 
     this.vpc = new ec2.Vpc(this, `bridge-VPC`, {
-      cidr: '10.192.0.0/16',
+      cidr: '10.0.0.0/16',
       maxAzs: 2,
       natGateways: 1,
       enableDnsHostnames: true,
