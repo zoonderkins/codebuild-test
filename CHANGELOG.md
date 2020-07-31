@@ -1,3 +1,14 @@
+# [v1.0.0-test.2](https://github.com/ookangzheng/codebuild-test/compare/v1.0.0-test.1...v1.0.0-test.2) (2020-07-31)
+
+
+
+# [1.0.0-test.2](https://github.com/ookangzheng/codebuild-test/compare/v1.0.0-test.1...v1.0.0-test.2) (2020-07-31)
+
+
+### Bug Fixes
+
+* VPC cidr ([feb75a6](https://github.com/ookangzheng/codebuild-test/commit/feb75a65814d892067f735e42b1d2c1ec6310580))
+
 # v1.0.0-test.1 (2020-07-31)
 
 
