@@ -1,0 +1,3 @@
+{
+  "app": "npx ts-node bin/bob_bridge_api_vpc.ts"
+}
