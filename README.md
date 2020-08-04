@@ -18,7 +18,7 @@ git push -f origin master
 git tag | xargs -L 1 | xargs git push origin --delete
 
 # delete all local tags
-git tag | xargs -L 1 | xargs git tag --delete
+git tag | xargs -L 1 | xargs git push origin --delete
 ```
 ## Commitizen
 
