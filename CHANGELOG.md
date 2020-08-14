@@ -1,3 +1,11 @@
+## [2.0.1-alpha.2](https://github.com/ookangzheng/codebuild-test/compare/v2.0.1-alpha.1...v2.0.1-alpha.2) (2020-08-14)
+
+
+### Bug Fixes
+
+* increase lambda memory size ([795bf00](https://github.com/ookangzheng/codebuild-test/commit/795bf000fccb8f8bdf57449e7555c9490fe1a1ef))
+* readme typo ([3eef3d9](https://github.com/ookangzheng/codebuild-test/commit/3eef3d9ff46ef56c8e18f407a319378962741dc6))
+
 ## [2.0.1-alpha.1](https://github.com/ookangzheng/codebuild-test/compare/v2.0.0...v2.0.1-alpha.1) (2020-08-14)
 
 
