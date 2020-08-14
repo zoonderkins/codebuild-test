@@ -22,7 +22,7 @@ jobs:
       - name: Semantic Release
         uses: codfish/semantic-release-action@master
         env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #- name: Semantic Release
       #  uses: actions/setup-node@v1
       #  with:
