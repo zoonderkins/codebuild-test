@@ -1,0 +1,27 @@
+name: ci for semantic release
+
+on:
+  pull_request:
+    branches:
+      - master
+      - test
+      - dev
+
+jobs:
+  build:
+    name: checkout-version
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Semantic Release
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - run: npm install
+      - run: npx semantic-release --no-ci
+        env:
+          GH_ACTIONS: true
+          DENO_BUILD_MODE: release
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
