@@ -1,27 +1,35 @@
-name: ci for semantic release
+name: Sygna Semantic Release
 
 on:
   pull_request:
     branches:
       - master
       - test
+  push:
+    branches:
       - dev
 
 jobs:
   build:
     name: checkout-version
+    if: "!contains(github.event.head_commit.message, '[ci-skip]')"
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Semantic Release
-        uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-      - run: npm install
-      - run: npx semantic-release --no-ci
+      - uses: codfish/semantic-release-action@master
         env:
-          GH_ACTIONS: true
-          DENO_BUILD_MODE: release
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #- name: Semantic Release
+      #  uses: actions/setup-node@v1
+      #  with:
+      #    node-version: "12.x"
+      #  run: |
+      #    npm install
+      #    npx semantic-release --no-ci
+      #  env:
+      #    GH_ACTIONS: true
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
