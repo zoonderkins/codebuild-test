@@ -1,3 +1,11 @@
+## [2.0.1-alpha.4](https://github.com/ookangzheng/codebuild-test/compare/v2.0.1-alpha.3...v2.0.1-alpha.4) (2020-08-14)
+
+
+### Bug Fixes
+
+* release ([d8a2ccd](https://github.com/ookangzheng/codebuild-test/commit/d8a2ccd227040e927a19fd86bc415b9fb051beaf)), closes [#30](https://github.com/ookangzheng/codebuild-test/issues/30)
+* release ([f0e327e](https://github.com/ookangzheng/codebuild-test/commit/f0e327ee36ddf56db298386daee3cca98c776b41))
+
 ## [2.0.1-alpha.3](https://github.com/ookangzheng/codebuild-test/compare/v2.0.1-alpha.2...v2.0.1-alpha.3) (2020-08-14)
 
 
