@@ -19,14 +19,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Semantic Release
-        id: semantic
-        uses: codfish/semantic-release-action@master
+      - name: Install NPM
         run: |
           npm i -g @semantic-release/changelog
           npm i -g @semantic-release/git
           npm install
 
+      - name: Semantic Release
+        id: semantic
+        uses: codfish/semantic-release-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #- name: Semantic Release
