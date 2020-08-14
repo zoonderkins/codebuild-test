@@ -1,6 +1,6 @@
 ## Semantic release example
 
-## Added from SYG-123
+## Added from SYG-123 -- trigger test
 
 ## Install commitlint
 
