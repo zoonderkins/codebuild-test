@@ -9,18 +9,6 @@
   ],
   "plugins": [
     [
-      "semantic-release-gitmoji",
-      {
-        "releaseRules": {
-          "patch": {
-            "include": [
-              ":bento:"
-            ]
-          }
-        }
-      },
-    ],
-    [
       "@semantic-release/changelog",
       {
         "changelogFile": "CHANGELOG.md"
@@ -36,7 +24,18 @@
         "message": "🔖 release: ${nextRelease.version} \n ${nextRelease.notes}",
       },
     ],
-    "@semantic-release/commit-analyzer",
+    ["@semantic-release/commit-analyzer", {
+      "preset": "angular",
+      "releaseRules": [
+        {"type": "refactor", "release": "major"},
+        {"type": "feat", "release": "minor"},
+        {"type": "fix", "release": "patch"},
+        {"type": "bump", "release": "patch"}
+      ],
+      "parserOpts": {
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+      }
+    }],
     "@semantic-release/release-notes-generator",
   ],
 }

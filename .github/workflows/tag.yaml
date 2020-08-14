@@ -1,27 +1,57 @@
-name: ci for semantic release
+name: Sygna Semantic Release
 
 on:
   pull_request:
+    types: [closed]
     branches:
       - master
       - test
+  push:
+    branches:
       - dev
 
 jobs:
   build:
     name: checkout-version
+    if: ${{!contains(github.event.head_commit.message , '[skip ci]')}}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: should it be skipped?
+        env:
+          COMMIT_FILTER: "Merge"
+        run: |
+          # Get last commit message
+          readonly local last_commit_log=$(git log -1 --pretty=format:"%s")
+          echo "last commit log: $last_commit_log"
+
+          readonly local filter_count=$(echo "$last_commit_log" | grep -c "$COMMIT_FILTER" )
+          echo "number of occurence of '$COMMIT_FILTER' in '$last_commit_log': $filter_count"
+
+          if [[ "$filter_count" -eq 0 ]]; then
+            echo "all good, continue"
+          else
+            echo "the last commit log \"$last_commit_log\" contains \"$COMMIT_FILTER\", stopping"
+            exit 78
+          fi
+
+      - name: Install NPM
+        run: |
+          npm install
+
       - name: Semantic Release
         uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-      - run: npm install
       - run: npx semantic-release --no-ci
         env:
           GH_ACTIONS: true
-          DENO_BUILD_MODE: release
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Semantic Release
+      #   id: semantic
+      #   uses: codfish/semantic-release-action@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

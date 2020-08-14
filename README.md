@@ -1,5 +1,4 @@
-## I'm readme aaa
-
+## Semantic release example
 
 ## Install commitlint
 
@@ -12,11 +11,11 @@ npm install --save-dev @commitlint/cli @commitlint/config-conventional
 ## Reset / clear all git commit
 
 ```bash
-git checkout --orphan latest_branch
-git add -A
-git commit -am "init"
-git branch -D master
-git branch -m master
+git checkout --orphan latest_branch \
+git add -A \
+git commit -am "feat: init" \
+git branch -D master \
+git branch -m master \
 git push -f origin master
 git gc --aggressive --prune=all
 ```
