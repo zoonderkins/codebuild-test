@@ -13,7 +13,12 @@ on:
 jobs:
   build:
     name: checkout-version
+<<<<<<< HEAD
     if: ${{!contains(github.event.head_commit.message , '[skip ci]')}}
+=======
+    if: "!contains(github.event.head_commit.message, 'Merge branch')"
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+>>>>>>> test
     runs-on: ubuntu-latest
 
     steps:
