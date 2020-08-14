@@ -24,18 +24,17 @@ jobs:
         run: |
           npm install
 
+      # - name: Semantic Release
+      #   id: semantic
+      #   uses: codfish/semantic-release-action@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Semantic Release
-        id: semantic
-        uses: codfish/semantic-release-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #- name: Semantic Release
-      #  uses: actions/setup-node@v1
-      #  with:
-      #    node-version: "12.x"
-      #  run: |
-      #    npm install
-      #    npx semantic-release --no-ci
-      #  env:
-      #    GH_ACTIONS: true
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       uses: actions/setup-node@v1
+       with:
+         node-version: "12.x"
+       run: |
+         npx semantic-release --no-ci
+       env:
+         GH_ACTIONS: true
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
