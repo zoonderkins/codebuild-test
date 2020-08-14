@@ -6,7 +6,7 @@ on:
     branches:
       - master
       - test
-  push_request:
+  push:
     branches:
       - dev
 
