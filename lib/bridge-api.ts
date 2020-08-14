@@ -9,7 +9,7 @@ export class BridgeApiStack extends cdk.Stack {
       runtime: lambda.Runtime.NODEJS_12_X,
       code: lambda.AssetCode.fromAsset('lambda'),
       handler: 'index.handler',
-      memorySize: 128,
+      memorySize: 256,
       timeout: cdk.Duration.seconds(30),
     })
   }
