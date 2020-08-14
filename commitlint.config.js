@@ -17,6 +17,7 @@ module.exports = {
         'revert',
         'build',
         'ci',
+        'skip',
       ]
     ],
     'scope-empty': [0]
