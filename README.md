@@ -1,4 +1,4 @@
-## I'm readme aaa
+## Semantic release example
 
 
 ## Install commitlint
