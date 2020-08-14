@@ -11,9 +11,14 @@ on:
       - dev
 
 jobs:
+  conditional-skip-ci:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+  conditional-headerWith-Merge:
+    if: "!startsWith(github.event.head_commit.message, 'Merge')"
+
   build:
     name: checkout-version
-    if: "!contains(github.event.head_commit.message, '[skip ci]')" || "!startsWith(github.event.head_commit.message, 'Merge')"
     runs-on: ubuntu-latest
 
     steps:
