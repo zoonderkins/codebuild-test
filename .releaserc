@@ -9,18 +9,6 @@
   ],
   "plugins": [
     [
-      "semantic-release-gitmoji",
-      {
-        "releaseRules": {
-          "patch": {
-            "include": [
-              ":bento:"
-            ]
-          }
-        }
-      },
-    ],
-    [
       "@semantic-release/changelog",
       {
         "changelogFile": "CHANGELOG.md"
