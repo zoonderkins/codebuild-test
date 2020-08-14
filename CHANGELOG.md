@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+## [2.0.1-alpha.4](https://github.com/ookangzheng/codebuild-test/compare/v2.0.1-alpha.3...v2.0.1-alpha.4) (2020-08-14)
+=======
 ## [2.0.1-beta.1](https://github.com/ookangzheng/codebuild-test/compare/v2.0.0...v2.0.1-beta.1) (2020-08-14)
+>>>>>>> test
 
 
 ### Bug Fixes
 
+<<<<<<< HEAD
+* release ([d8a2ccd](https://github.com/ookangzheng/codebuild-test/commit/d8a2ccd227040e927a19fd86bc415b9fb051beaf)), closes [#30](https://github.com/ookangzheng/codebuild-test/issues/30)
+* release ([f0e327e](https://github.com/ookangzheng/codebuild-test/commit/f0e327ee36ddf56db298386daee3cca98c776b41))
+=======
 * buildspec ([a518bb2](https://github.com/ookangzheng/codebuild-test/commit/a518bb24dfce3dfcf6d8c81bf4172412ad2053ca)), closes [#21](https://github.com/ookangzheng/codebuild-test/issues/21)
 * buildspec ([022835d](https://github.com/ookangzheng/codebuild-test/commit/022835dea04d162b9c17ea41ba315e0e0d1690e4))
 * buildspec 1 ([00f3b48](https://github.com/ookangzheng/codebuild-test/commit/00f3b484f7ef8e2daf377dea2b3697c1915db4ee))
@@ -23,6 +31,7 @@
 * readme typo ([991be91](https://github.com/ookangzheng/codebuild-test/commit/991be911ab2234abb8bd34ef0eb87fd699a0619b))
 * readme typo ([247549a](https://github.com/ookangzheng/codebuild-test/commit/247549aa5d13445514463d2617110bc191835729))
 * release to test branch ([cb92a45](https://github.com/ookangzheng/codebuild-test/commit/cb92a45119a8d3466612f06d67288756ecde9417)), closes [#26](https://github.com/ookangzheng/codebuild-test/issues/26)
+>>>>>>> test
 
 ## [2.0.1-alpha.3](https://github.com/ookangzheng/codebuild-test/compare/v2.0.1-alpha.2...v2.0.1-alpha.3) (2020-08-14)
 

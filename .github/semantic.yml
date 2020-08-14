@@ -4,10 +4,11 @@ types:
   - feat
   - fix
   - docs
-  - skip
   - refactor
   - test
-  - build
-  - ci
+  - bump
   - chore
   - revert
+  - build
+  - ci
+  - skip
