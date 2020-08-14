@@ -30,11 +30,11 @@ jobs:
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Semantic Release
-       uses: actions/setup-node@v1
-       with:
-         node-version: "12.x"
-       run: |
-         npx semantic-release --no-ci
-       env:
-         GH_ACTIONS: true
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+        run: |
+          npx semantic-release --no-ci
+        env:
+          GH_ACTIONS: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
