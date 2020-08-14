@@ -10,7 +10,7 @@ export class BridgeApiStack extends cdk.Stack {
       code: lambda.AssetCode.fromAsset('lambda'),
       handler: 'index.handler',
       memorySize: 256,
-      timeout: cdk.Duration.seconds(30),
+      timeout: cdk.Duration.seconds(40),
     })
   }
 }
